@@ -1,0 +1,8 @@
+C:\Users\Alberto\Desktop\Programing\ProyectoPuerta\ProyectoPuerta\bin\Debug\ProyectoPuerta.exe.config
+C:\Users\Alberto\Desktop\Programing\ProyectoPuerta\ProyectoPuerta\bin\Debug\ProyectoPuerta.exe
+C:\Users\Alberto\Desktop\Programing\ProyectoPuerta\ProyectoPuerta\bin\Debug\ProyectoPuerta.pdb
+C:\Users\Alberto\Desktop\Programing\ProyectoPuerta\ProyectoPuerta\obj\Debug\ProyectoPuerta.csproj.AssemblyReference.cache
+C:\Users\Alberto\Desktop\Programing\ProyectoPuerta\ProyectoPuerta\obj\Debug\ProyectoPuerta.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alberto\Desktop\Programing\ProyectoPuerta\ProyectoPuerta\obj\Debug\ProyectoPuerta.csproj.CoreCompileInputs.cache
+C:\Users\Alberto\Desktop\Programing\ProyectoPuerta\ProyectoPuerta\obj\Debug\ProyectoPuerta.exe
+C:\Users\Alberto\Desktop\Programing\ProyectoPuerta\ProyectoPuerta\obj\Debug\ProyectoPuerta.pdb
