@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoPuerta
+namespace ProyectoPuertaAvanzado
 {
     class Program
     {
@@ -60,9 +60,9 @@ namespace ProyectoPuerta
 
         static Puerta ModifyDoor() 
         {
-			Console.WriteLine("\n\n\t\t\t\t     --- Construyamos la puerta ---");
-			int alto = Tools.CapturaEntero("\n\t\t\t\t\t¿Altura en cm?", 50, 250);
-			int ancho = Tools.CapturaEntero("\n\t\t\t\t\t¿Anchura en cm?", 30, 250);
+            Console.WriteLine("\n\n\t\t\t\t     --- Construyamos la puerta ---");
+            int alto = Tools.CapturaEntero("\n\t\t\t\t\t¿Altura en cm?", 50, 250);
+            int ancho = Tools.CapturaEntero("\n\t\t\t\t\t¿Anchura en cm?", 30, 250);
 			ConsoleColor color = Tools.EligeColor();
 
 			door.Alto = alto;

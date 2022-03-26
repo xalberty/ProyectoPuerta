@@ -1,0 +1,8 @@
+C:\Users\Alberto\Desktop\Programing\ProyectoPuertaAvanzado\ProyectoPuertaAvanzado\bin\Debug\ProyectoPuertaAvanzado.exe.config
+C:\Users\Alberto\Desktop\Programing\ProyectoPuertaAvanzado\ProyectoPuertaAvanzado\bin\Debug\ProyectoPuertaAvanzado.exe
+C:\Users\Alberto\Desktop\Programing\ProyectoPuertaAvanzado\ProyectoPuertaAvanzado\bin\Debug\ProyectoPuertaAvanzado.pdb
+C:\Users\Alberto\Desktop\Programing\ProyectoPuertaAvanzado\ProyectoPuertaAvanzado\obj\Debug\ProyectoPuertaAvanzado.csproj.AssemblyReference.cache
+C:\Users\Alberto\Desktop\Programing\ProyectoPuertaAvanzado\ProyectoPuertaAvanzado\obj\Debug\ProyectoPuertaAvanzado.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alberto\Desktop\Programing\ProyectoPuertaAvanzado\ProyectoPuertaAvanzado\obj\Debug\ProyectoPuertaAvanzado.csproj.CoreCompileInputs.cache
+C:\Users\Alberto\Desktop\Programing\ProyectoPuertaAvanzado\ProyectoPuertaAvanzado\obj\Debug\ProyectoPuertaAvanzado.exe
+C:\Users\Alberto\Desktop\Programing\ProyectoPuertaAvanzado\ProyectoPuertaAvanzado\obj\Debug\ProyectoPuertaAvanzado.pdb
