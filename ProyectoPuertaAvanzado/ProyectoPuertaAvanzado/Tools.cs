@@ -8,7 +8,6 @@ namespace ProyectoPuertaAvanzado
 {
     class Tools
     {
-        // Faltan bastantes cláusulas
 
         public static int CapturaEntero(string texto, int min, int max)
         {
@@ -33,15 +32,15 @@ namespace ProyectoPuertaAvanzado
             return valor;
         }
 
-        static int CapturaNumPulsado(string mensaje, int min, int max)
+        public static int CapturaNumPulsado(string mensaje, int min, int max)
         {
             int opcion = 0;
 
-            Console.Write("\n\t\t\t\t\tIntroduce una opción: ");
-            // guardamos el valor numérico de la tecla pulsada
-            opcion = Console.ReadKey().KeyChar - '0';
-            // Comprobamos que se ha pulsado una opción correcta
-            while (opcion < 0 || opcion > 5)
+            Console.Write("\n\t\t\t\t\t{0}",mensaje);
+            
+            opcion = Console.ReadKey(true).KeyChar - '0';
+            
+            while (opcion < min|| opcion > max)
             {
                 Console.WriteLine("\n\n\t\t\t\t\tERROR");
                 Console.Write("\n\t\t\t\t\tIntroduce una opción: ");
@@ -54,7 +53,7 @@ namespace ProyectoPuertaAvanzado
         public static int Menu()
         {
 
-            Console.WriteLine("\n\n\n");
+            Console.WriteLine("\n\n");
 			Console.WriteLine("\t\t\t\t\t╔═════════════════════╗");
             Console.WriteLine("\t\t\t\t\t║   MENÚ de PUERTA    ║");
             Console.WriteLine("\t\t\t\t\t╠═════════════════════╣");
@@ -62,39 +61,30 @@ namespace ProyectoPuertaAvanzado
             Console.WriteLine("\t\t\t\t\t║                     ║");
             Console.WriteLine("\t\t\t\t\t║     2) Cerrar       ║");
 			Console.WriteLine("\t\t\t\t\t║                     ║");
-			Console.WriteLine("\t\t\t\t\t║     3) Mostrar      ║");
+            Console.WriteLine("\t\t\t\t\t║     3) Montar       ║");
+            Console.WriteLine("\t\t\t\t\t║                     ║");
+            Console.WriteLine("\t\t\t\t\t║     4) Desmontar    ║");
+            Console.WriteLine("\t\t\t\t\t║                     ║");
+            Console.WriteLine("\t\t\t\t\t║     5) Mostrar      ║");
 			Console.WriteLine("\t\t\t\t\t║                     ║");
-            Console.WriteLine("\t\t\t\t\t║     4) Pintar       ║");
+            Console.WriteLine("\t\t\t\t\t║     6) Pintar       ║");
 			Console.WriteLine("\t\t\t\t\t║                     ║");
-			Console.WriteLine("\t\t\t\t\t║     5) Fabricar     ║");
-			Console.WriteLine("\t\t\t\t\t║_____________________║");
+			Console.WriteLine("\t\t\t\t\t║     7) Modificar    ║");
+            Console.WriteLine("\t\t\t\t\t║                     ║");
+            Console.WriteLine("\t\t\t\t\t║     8) Crear        ║");
+            Console.WriteLine("\t\t\t\t\t║                     ║");
+            Console.WriteLine("\t\t\t\t\t║     9) Eliminar     ║");
+            Console.WriteLine("\t\t\t\t\t║_____________________║");
             Console.WriteLine("\t\t\t\t\t║                     ║");
             Console.WriteLine("\t\t\t\t\t║     0) Salir        ║");
             Console.WriteLine("\t\t\t\t\t╚═════════════════════╝");
 
 
-            return CapturaNumPulsado("Pulse su opción", 0, 5);
+            return CapturaNumPulsado("Pulse su opción: ", 0, 9);
             
         }
 
-        public static ConsoleColor EligeColor()
-        {
-            ConsoleColor[] vColors = { ConsoleColor.White,  ConsoleColor.DarkGray, ConsoleColor.Red, ConsoleColor.Blue, ConsoleColor.Yellow, ConsoleColor.Green };
-
-            Console.WriteLine("\n");
-
-            for (int i = 0; i < vColors.Length; i++)
-            {
-                Console.Write("\t\t\t\t\t {0})", i+1);
-                Console.ForegroundColor = vColors[i];
-                Console.WriteLine(" ████████ ");
-                Console.ResetColor();
-            }
-
-            int color = CapturaEntero("\n\t\t\t\t\tElige un color", 1, 6);
-
-            return vColors[color-1];
-        }
+   
 
     }
 }

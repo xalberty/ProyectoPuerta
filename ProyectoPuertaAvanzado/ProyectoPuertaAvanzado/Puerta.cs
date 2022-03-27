@@ -8,13 +8,17 @@ namespace ProyectoPuertaAvanzado
 {
     class Puerta
     {
+        string nombre;
         int alto;
         int ancho;
         ConsoleColor color;
-        bool estado = false; //** Yo he controlado el estado así pero, si quieres puedes hacerlo de otro modo 
+        bool estado = false; // False -> Closed| True -> Open
+        bool situacion = true; // False -> Unmounted| True -> Mounted
 
 
         #region Propiedades
+
+        public string Nombre { get => nombre; set => nombre = value; }
         public int Alto { get => alto; set => alto = value; }
         public int Ancho { get => ancho; set => ancho = value; }
         public ConsoleColor Color { get => color; set => color = value; }
@@ -23,52 +27,98 @@ namespace ProyectoPuertaAvanzado
         #endregion
 
 
-        //---- Constructores -----
-
-        public Puerta(int alto, int ancho)
+        public Puerta(string nombre, int alto, int ancho)
         {
+            this.nombre = nombre;
             this.alto = alto;
             this.ancho = ancho;
             color = ConsoleColor.White;
         }
 
-        public Puerta(int alto, int ancho, ConsoleColor color)
+        public Puerta(string nombre, int alto, int ancho, ConsoleColor color)
         {
+            this.nombre = nombre;
             this.alto = alto;
             this.ancho = ancho;
             this.color = color;
         }
 
 
-        //---- Métodos ----
         public void Abrir()
         {
-            if (estado)
-                Console.WriteLine("\n\n\t\t\t\t\tLa puerta ya estaba abierta!");
-            else
+            if (!situacion)
             {
-                Console.WriteLine("\n\n\t\t\t\t\tLa puera ahora está abierta!");
-                estado = true;
+                Console.WriteLine("\n\n\t\t\t\t\tError al abrir la puerta");
+                Console.WriteLine("\t\t\t   Para ejecutar esta ación primero has de montar {0}", nombre);
+            }
+            else
+            {       
+                if (estado)
+                    Console.WriteLine("\n\n\t\t\t\t\t{0} ya estaba abierta!",nombre);
+                else
+                {
+                    Console.WriteLine("\n\n\t\t\t\t\t{0} ahora está abierta!", nombre);
+                    estado = true;
+                }
             }
         }
 
         public void Cerrar()
         {
-            if (!estado)
-                Console.WriteLine("\n\n\t\t\t\t\tLa puerta ya estaba cerrada!");
+            if (!situacion)
+            {
+                Console.WriteLine("\n\n\t\t\t\t\tError al abrir la puerta");
+                Console.WriteLine("\t\t\t   Para ejecutar esta ación primero has de montar la puerta {0}", nombre);
+            }
             else
             {
-                Console.WriteLine("\n\n\t\t\t\t\tLa puera ahora está cerrada!");
-                estado = false;
+                if (!estado)
+                    Console.WriteLine("\n\n\t\t\t\t\t{0} ya estaba cerrada!", nombre);
+                else
+                {
+                    Console.WriteLine("\n\n\t\t\t\t\t{0} ahora está cerrada!", nombre);
+                    estado = false;
+                }
             }
+        }
+
+        public void Montar()
+        {
+            if (situacion)
+                Console.WriteLine("\n\n\t\t\t\t\t{0} ya se encuentra montada!", nombre);
+            else
+            {
+                Console.WriteLine("\n\n\t\t\t\t\tHas montado {0}!", nombre);
+                situacion = true;
+            }
+                
+        }
+
+        public void Desmontar()
+        {
+            if(!situacion)
+                Console.WriteLine("\n\n\t\t\t\t\t{0} ya se encuentra desmontada!", nombre);
+            else
+            {
+                Console.WriteLine("\n\n\t\t\t\t\tHas desmontado {0}!", nombre);
+                situacion= false;
+            }
+                
         }
 
         public void Mostrar()
         {
+            Console.WriteLine("\n\n\t\t\t\t\tNombre: {0}", nombre);
+
             if (!estado)
-                Console.WriteLine("\n\n\t\t\t\t\tEstado: Cerrada");
+                Console.WriteLine("\t\t\t\t\tEstado: Cerrada");
             else
                 Console.WriteLine("\t\t\t\t\tEstado: Abierta");
+            if (!situacion)
+                Console.WriteLine("\n\n\t\t\t\t\tSituación: Desmontada");
+            else
+                Console.WriteLine("\t\t\t\t\tSituación: Montada");
+
             Console.WriteLine("\t\t\t\t\tAlto: {0}", alto);
             Console.WriteLine("\t\t\t\t\tAncho: {0}", ancho);
 
@@ -79,5 +129,21 @@ namespace ProyectoPuertaAvanzado
             Console.WriteLine("◄ Este color");
             Console.ResetColor();
         }
+
+        //public override string ToString()
+        //{
+        //    Console.ForegroundColor = color;
+
+        //    return String.Format
+        //    (
+        //        "{0}{1}{2}{3}",
+
+        //        "\n\n\tEstado: " + estado,
+        //        "\n\tNombre: " + nombre,
+        //        "\n\tAlto: " + alto,
+        //        "\tColor: ████████ " + color + " ◄ Este color"
+        //    );
+
+        //}
     }
 }
